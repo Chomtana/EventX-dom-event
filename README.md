@@ -50,15 +50,17 @@ const target = $("#ex")[0];
 var config = { childList: true };
 
 const ob = new MutationObserver(mutationsList => {
-    for (var mutation of mutationsList) {
-        if (mutation.target == target && mutation.addedNodes.length > 0) {
-            mutation.addedNodes.forEach(node=>{
-                if (node.nodeName.toUpperCase() == "DIV") {
+  for (var mutation of mutationsList) {
+    if (mutation.target == target && mutation.addedNodes.length > 0) {
+      mutation.addedNodes.forEach(node=>{
+        if (node.nodeName.toUpperCase() == "DIV") {
 ```
 ```javascript
-                    
+          alert("Div Added");        
 ```
 ```javascript
+        }
+      }
     }
   }
 });
