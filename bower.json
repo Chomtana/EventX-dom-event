@@ -1,0 +1,32 @@
+{
+  "name": "eventx-css-eventt",
+  "description": "Allow programmer to listen for css style change event (You can also use JQuery to listen for css style change event).",
+  "main": "dist/eventx-css.min.js",
+  "authors": [
+    "Chomtana"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "eventx",
+    "eventx-css",
+    "css-event",
+    "style-event",
+    "event",
+    "css",
+    "style",
+    "media-event",
+    "media-style-event",
+    "jquery"
+  ],
+  "homepage": "https://github.com/Chomtana/EventX-css-event",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "eventx-core": "*"
+  }
+}

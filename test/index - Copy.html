@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Asset Management</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <!--<script src="./ResizeObserver.global.js"></script>-->
+    <style>
+        @media screen and (max-width: 1000px) {
+            #aaa {
+                width: 800px !important;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            #aaa {
+                width: 600px !important;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            #aaa {
+                width: 400px !important;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            #aaa {
+                width: 250px !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="width:1250px;height:250px;background-color:black;" id="aaa">dasd</div>
+
+    <script src="../dist/eventx-dom.min.js"></script>
+
+    <script>
+        //on("click","#aaa",e=>console.log(e));
+        /*evx.on(document.getElementById("aaa"), "resize", e => console.log(e));
+        setTimeout(() => {
+            console.log("off");
+            evx.off(document.getElementById("aaa"), "resize", e => console.log(e));
+        }, 5000);*/
+        
+        $(window).on('resize',function() {
+            if ($(window).width()==800) {
+                $("#aaa").height(400);
+            }
+        });
+
+        $("#aaa").on("stylechange",function(e) { console.log(e,this); });
+        $("#aaa").on("mediastylechange",function(e){console.log(e,this);});
+
+    </script>
+</body>
+
+</html>
